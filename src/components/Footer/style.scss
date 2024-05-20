@@ -1,0 +1,22 @@
+.App-footer {
+  background-color: #F5F5F5;
+  height: 42px;
+  min-width: 768px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction:row;
+  font-size: 12px;
+}
+
+footer p {
+  padding: 0px;
+  font-weight: 400;
+  color: #130301;
+}
+ 
+.App-footer img {
+  height: 16px;
+  margin: 0px;
+  padding-left: 4px;
+}

@@ -1,0 +1,239 @@
+.projects {
+    min-width: 768px;
+    width: 100%;
+    height: auto;
+    background-color: #F2F2F2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .shapeBrown {
+        width: 16px;
+        height: 16px;
+        padding-right: 10px;
+      }
+
+    }
+
+    .filterMenu {
+      button {
+        width: 112px;
+        height: 32px;
+        margin-right: 20px;
+        background-color: #EEE8DD;
+        border: 0px;
+        border-radius: 8px;
+        font-size: 12px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      .selected { //comportement temporaire pour le filtre actif
+        background-color: #BDA175;
+        font-weight: 500;
+      }      
+      :last-child { //comportement temporaire pour le filtre actif
+        margin-right: 0px;
+      }
+    }
+
+    .cards {
+      width: auto;
+      height: auto;
+      padding: 50px;
+      padding-top: 30px;
+      display: flex;
+      flex-direction: row; 
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center;
+
+      .card {
+        background-color: #EEE8DD;
+        max-width: 200px;
+        height: 200px;
+        margin: 20px;
+        border-radius: 8px;
+      }
+      
+      .card:hover {
+        background-color: #f3ede3;
+        cursor: pointer;
+      }
+
+      .cardCover {
+        width: 200px;
+        height: 200px;
+        //margin: 50px 50px 50px 50px;
+        //padding: 20px 20px 20px 20px;
+        color: white;
+        opacity: 1;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .titleBar {
+        position: relative;
+        top: -30px;
+        width: 200px;
+        height: 24px;
+        background-color: rgba(0, 0, 0, 0.75);
+        color: white;
+        border-radius: 0px 0px 8px 8px;
+        display: flex;
+        align-items: center;
+
+        h5 {
+          padding-left: 8px;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }        
+      
+      .cardMask {
+        position: relative;
+        top: -230px;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(0, 0, 0, 0.1);
+        color: white;
+        border-radius: 8px 8px 8px 8px;
+      }
+
+      .cardMask:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+      }
+    }
+  }
+
+/*   .modal {
+    display: none;
+    width: 500px;
+    height: 400px;
+    background-color: red;
+    img {
+      width: 500px;
+      height: 400px;
+      object-fit: cover;
+    }
+  } */
+
+  .modal-window {
+    display: none;
+    position: fixed;
+    top: 0px;
+    padding: 100%;
+    background-color: rgba(75, 75, 75, 0.411);
+    user-select: none;
+      img {
+        width: 500px;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 6px;
+        opacity: 2;
+        position: fixed;
+        top: calc(50% - 200px);
+        left: calc(50% - 250px);
+      }    
+      .description {
+        width: 500px;
+        height: 180px;
+        background-color: rgba(0, 0, 0, 0.75);
+        position: fixed;
+        top: calc(50% + 20px);
+        left: calc(50% - 250px);
+        z-index: 1;
+        border-radius: 0px 0px 6px 6px;
+        h5 {
+          margin-top: 20px;
+          margin-bottom: 10px;
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: left;
+          font-size: 16px;
+          font-weight: 400;
+          background-color: rgba(255, 255, 255, 0);
+          color: white;
+        }
+        p {
+          padding-left: 20px;
+          padding-right: 20px;
+          text-align: left;
+          font-size: 12px;
+          font-weight: 300;
+          background-color: rgba(255, 255, 255, 0);
+          color: white;
+        }
+        a {
+          text-decoration: none;
+          color: black;
+        }
+        .githubButton {
+          width: 62px;
+          height: 20px;
+          padding-bottom: 2px;
+          background-color: #F5390A;
+          position: fixed;
+          top: calc(50% + 20px);
+          left: calc(50% + 168px);
+          font-size: 14px;
+          border-radius: 0px 0px 6px 6px;
+          cursor: pointer;
+        }
+      }
+    }
+    .close {
+      position: fixed;
+      width: 24px;
+      height: 24px;
+      z-index: 1;
+      top: calc(50% - 196px);
+      left: calc(50% + 221px);
+      background-color: rgba(197, 196, 187, 0.534);
+      border-radius: 4px;
+      cursor: pointer;
+
+      img {
+        position: fixed;
+        width: 24px;
+        height: 24px;
+        top: calc(50% - 196px);
+        left: calc(50% + 221px);
+      }
+    }
+
+
+
+  @media screen and (max-width: 900px) {
+    .projects .cards {
+      width: 508px;
+      flex-direction: column;
+      justify-content:space-between;
+      .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 0px;
+        margin-bottom: 30px;
+      }
+      .cardCover {
+        width: 100%; 
+      }
+      .titleBar {
+        width: 100%
+      }
+      .cardMask {
+        width: 100%;
+      }
+    }
+  }
